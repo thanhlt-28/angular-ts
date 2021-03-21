@@ -1,0 +1,38 @@
+<div class="table-responsive">
+  <h4 class="text-primary">Danh sách sản phẩm</h4>
+
+  <table class="table" >
+    <caption>
+      Adminstrator
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tên sản phẩm</th>
+        <th scope="col">Ảnh</th>
+        <th scope="col">Mô tả</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Danh mục</th>
+        <th scope="col">
+          <a class="btn btn-warning" href="">Thêm sản phẩm</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of drinks">
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ item.name }}</td>
+        <td>
+          <img [src]="item.image" class="img-thumbnail" />
+        </td>
+        <td>{{ item.desc }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.cate_id}}</td>
+        <td>
+          <a class="btn btn-info" href="">Sửa </a>
+          <a class="btn btn-danger" href="">Xóa </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

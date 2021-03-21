@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: auto;
+  max-width: 1170px;
+}
+header {
+  background: teal;
+}
+footer {
+  background: blueviolet;
+}
+h5,
+b {
+  color: white;
+}
+nav {
+  margin: auto;
+  background-color: thistle;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  float: right;
+  font-weight: bold;
+
+}
+nav li a:hover {
+  color: yellow;
+}

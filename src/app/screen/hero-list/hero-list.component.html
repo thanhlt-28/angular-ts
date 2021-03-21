@@ -1,0 +1,77 @@
+<div class="container">
+  <p>MONSTER</p>
+  <div class="row">
+    <div class="col-6">
+      <form (submit)="submitHeroForm($event)">
+        <div class="form-group">
+          <label for="">ID</label>
+          <input
+            type="text"
+            name="id"
+            [value]="formObject.id"
+            (change)="formObject.id = Number($event.target.value)"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Name</label>
+          <input
+            type="text"
+            name="name"
+            [value]="formObject.name"
+            (change)="formObject.name = $event.target.value"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Image</label>
+          <input
+            type="text"
+            name="image"
+            [value]="formObject.image"
+            (change)="formObject.image = $event.target.value"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <div class="col-6" *ngFor="let item of lstSkills">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                (click)="addSpell2FormObject(item)"
+                (checked)="setCheckedCheckbox(item)"
+                id="checkbox-{{ item.id }}"
+              />
+              <label class="form-check-label" for="checkbox-{{ item.id }}">
+                {{ item.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-control">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-3" *ngFor="let hero of heroes">
+      <img [src]="hero.image" class="img-thumbnail" />
+      <p>
+        <strong [innerHTML]="hero.name"></strong>
+      </p>
+      <ng-container *ngIf="hero.spells != undefined">
+        <span
+          *ngFor="let spe of hero.spells"
+          class="badge text-white bg-primary"
+          >{{ spe.name }}</span
+        >
+      </ng-container>
+      <div class="text-center" *ngFor="let hero of heroes">
+        <p>{{ hero.details }}</p>
+      </div>
+    </div>
+  </div>
+</div>
