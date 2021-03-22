@@ -15,8 +15,8 @@ export class DrinkComponent implements OnInit {
     this.getAll();
   }
   getAll() {
-    this.drinkSevice.getAll().subscribe((res: any) => {
-      this.drinks = res
+    this.drinkSevice.getAll().subscribe((item: any) => {
+      this.drinks = item;
     })
   }
 

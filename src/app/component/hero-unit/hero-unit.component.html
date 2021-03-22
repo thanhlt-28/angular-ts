@@ -1,1 +1,11 @@
-<p>hero-unit works!</p>
+<img [src]="heroData.image" class="img-thumbnail">
+<p>
+    <strong [innerHTML]="heroData.name"></strong>
+</p>
+<ng-container *ngIf="heroData.skills != undefined"> 
+    <span *ngFor="let ski of heroData.skills" class="badge text-white bg-primary">{{ski.name}}</span> 
+</ng-container>
+<div class="text-center">
+    <button (click)="updateHero()" class="btn btn-warning">Update</button> 
+    <button class="btn btn-danger" (click)="removeHero()">Remove</button>
+</div>
