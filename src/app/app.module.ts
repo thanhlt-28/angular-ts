@@ -9,6 +9,8 @@ import { DrinkComponent } from './drink/drink.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { HeroFormComponent } from './component/hero-form/hero-form.component';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { CategoriesComponent } from './categories/categories.component';
     HomeComponent,
     PageNotFoundComponent,
     CategoriesComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

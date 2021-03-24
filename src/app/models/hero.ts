@@ -6,7 +6,7 @@ export class Hero {
     details: string;
     spells: Array<Spell>;
 
-    constructor(name: string, id: number, image: string ="", details: string, spells: Array<Spell> = []) {
+    constructor(name: string, id: number, image: string, details: string, spells: Array<Spell> = []) {
         this.name = name;
         this.image = image;
         this.id = id;

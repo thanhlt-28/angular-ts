@@ -1,7 +1,5 @@
-import {
-  Component, OnInit, Input,
-  EventEmitter, Output
-} from '@angular/core';
+import { Component, OnInit, Input, 
+  EventEmitter, Output } from '@angular/core';
 import { Hero } from 'src/app/models/hero';
 @Component({
   selector: 'hero-unit',
@@ -11,17 +9,18 @@ import { Hero } from 'src/app/models/hero';
 export class HeroUnitComponent implements OnInit {
   @Input() heroData!: Hero;
   @Output() delete = new EventEmitter<Hero>();
+  @Output() updateEvent = new EventEmitter<Hero>();
   constructor() { }
   ngOnInit(): void {
   }
-  updateHero() {
+  updateHero(){
+    this.updateEvent.emit(this.heroData);
   }
-  removeHero() {
+  removeHero(){
     let conf = confirm(`bạn có chắc chắn xóa hero:
-      ${this.heroData.name} hay không ?`);
-    if (conf) {
+                          ${this.heroData.name} hay không ?`);
+    if(conf){
       this.delete.emit(this.heroData);
     }
   }
-
 }
