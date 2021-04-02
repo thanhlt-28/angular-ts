@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DrinkService } from '../sevice/drink.service';
+// import { DrinkService } from '../sevice/drink.service';
 import { Drink } from '../models/drink'
 
 @Component({
@@ -9,15 +9,16 @@ import { Drink } from '../models/drink'
 })
 export class DrinkComponent implements OnInit {
   drinks: Drink[] = [];
-  constructor(private drinkSevice: DrinkService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getAll();
+    // console.log(1);
+    // this.getAll();
   }
-  getAll() {
-    this.drinkSevice.getAll().subscribe((item: any) => {
-      this.drinks = item;
-    })
-  }
+  // getAll() {
+  //   this.drinkSevice.getAll().subscribe((item: any) => {
+  //     this.drinks = item;
+  //   })
+  // }
 
 }

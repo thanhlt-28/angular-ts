@@ -1,0 +1,33 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "sách toán học"
+        },
+        {
+            "id": 2,
+            "name": "sách kinh tế"
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "Cẩm nang mua bán đất",
+            "price": 150000,
+            "categoryId": 1,
+            "authorId": "Thu Huong",
+            "image": "https://img.youtube.com/vi/GQ-dxgpoY0s/hqdefault.jpg",
+            "category": {
+                "id": 1,
+                "name": "sách toán học"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Cẩm nang mua bán đất",
+            "price": 150000,
+            "authorId": "Thu Huong",
+            "image": "https://img.youtube.com/vi/GQ-dxgpoY0s/hqdefault.jpg"
+        }
+    ]
+}

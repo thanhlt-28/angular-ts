@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { HeroFormComponent } from './component/hero-form/hero-form.component';
+import { GenderPipePipe } from './pipes/gender-pipe.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { BookListComponent } from './screen/book-list/book-list.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { HeroFormComponent } from './component/hero-form/hero-form.component';
     HomeComponent,
     PageNotFoundComponent,
     CategoriesComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    HttpClientModule,
+    GenderPipePipe,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,

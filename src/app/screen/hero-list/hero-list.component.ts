@@ -30,4 +30,20 @@ export class HeroListComponent implements OnInit {
   parentRemove(removeObject: Hero){
     this.heroes = this.heroes.filter(item => item.id != removeObject.id);
   }
+  
+  saveFormSubmit(data: Hero){
+    let existed = this.heroes.findIndex(el => el.id == data.id);
+    if(existed == -1){
+      this.heroes.push(data);
+    }else{
+      this.heroes[existed] = {...data};
+    }
+    this.updateObject = {
+      id: 0,
+      name: "",
+      image: "",
+      details:"",
+      spells: []
+    };
+  }
 }

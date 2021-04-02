@@ -1,0 +1,7 @@
+<p>book-list works!</p>
+<p *ngFor="let b of books">
+  <a
+    [routerLink]="['/path/{{b.id}}']{{ b.title }}"
+    routerLinkActive="active"
+  ></a>
+</p>
